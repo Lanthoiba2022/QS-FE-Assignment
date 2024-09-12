@@ -1,0 +1,38 @@
+.control-panel {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .display-button {
+    padding: 10px 15px;
+    background-color: #f4f5f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .control-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 10;
+  }
+  
+  .control-options div {
+    margin-bottom: 10px;
+  }
+  
+  .control-options label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .control-options select {
+    width: 100%;
+    padding: 5px;
+  }
+  
