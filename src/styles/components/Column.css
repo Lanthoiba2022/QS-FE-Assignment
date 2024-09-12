@@ -8,10 +8,18 @@
   .column-header {
     font-size: 16px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
   }
   
   .tickets-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .status-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
   }

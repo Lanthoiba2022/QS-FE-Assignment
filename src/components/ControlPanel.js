@@ -7,13 +7,15 @@ const ControlPanel = ({ grouping, sorting, onGroupingChange, onSortingChange }) 
   return (
     <div className="control-panel">
       <button className="display-button" onClick={() => setIsOpen(!isOpen)}>
-        ☰ Display
+        <img src="/Display.svg" alt="Left Icon" className="icon-left" />
+          <span>Display</span>
+        <img src="/down.svg" alt="Right Icon" className="icon-right" />
       </button>
       {isOpen && (
         <div className="control-options">
           <div>
             <label>Grouping</label>
-            <select value={grouping} onChange={(e) => onGroupingChange(e.target.value)}>
+            <select className="grouping-select" value={grouping} onChange={(e) => onGroupingChange(e.target.value)}>
               <option value="status">Status</option>
               <option value="user">User</option>
               <option value="priority">Priority</option>

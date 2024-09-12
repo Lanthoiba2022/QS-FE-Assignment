@@ -9,7 +9,10 @@
     border: 1px solid #e0e0e0;
     border-radius: 5px;
     cursor: pointer;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
   
   .control-options {
     position: absolute;
@@ -23,16 +26,28 @@
   }
   
   .control-options div {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
   }
   
   .control-options label {
-    display: block;
-    margin-bottom: 5px;
+    margin-right: 130px;
+    flex-shrink: 0;
   }
   
   .control-options select {
-    width: 100%;
+    flex-grow: 1;
     padding: 5px;
   }
   
+  .grouping-select {
+    width: 110px; 
+  }
+  
+  .icon-left,
+.icon-right {
+  width: 20px; 
+  height: auto;
+  margin: 0 5px; 
+}

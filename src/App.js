@@ -104,6 +104,8 @@ const App = () => {
             name={columnName} 
             tickets={columnTickets}
             users={users}
+            grouping={grouping}
+            sorting={sorting}
           />
         ))}
       </main>
