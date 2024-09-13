@@ -48,10 +48,10 @@ const App = () => {
     let grouped = {};
     switch (grouping) {
       case 'status':
-        grouped = tickets.reduce((acc, ticket) => {
-          (acc[ticket.status] = acc[ticket.status] || []).push(ticket);
-          return acc;
-        }, {});
+        const statuses = ['Todo', 'In progress', 'Backlog', 'Done', 'Cancelled'];
+        statuses.forEach(status => {
+          grouped[status] = tickets.filter(ticket => ticket.status === status);
+        });
         break;
       case 'user':
         grouped = tickets.reduce((acc, ticket) => {
@@ -97,18 +97,20 @@ const App = () => {
         onGroupingChange={handleGroupingChange}
         onSortingChange={handleSortingChange}
       />
-      <main className="kanban-board">
-        {Object.entries(groupedAndSortedTickets).map(([columnName, columnTickets]) => (
-          <Column 
-            key={columnName} 
-            name={columnName} 
-            tickets={columnTickets}
-            users={users}
-            grouping={grouping}
-            sorting={sorting}
-          />
-        ))}
-      </main>
+      <div className="board-whole">
+        <main className="kanban-board">
+          {Object.entries(groupedAndSortedTickets).map(([columnName, columnTickets]) => (
+            <Column 
+              key={columnName} 
+              name={columnName} 
+              tickets={columnTickets}
+              users={users}
+              grouping={grouping}
+              sorting={sorting}
+            />
+          ))}
+        </main>
+      </div>
     </div>
   );
 };
